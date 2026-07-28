@@ -1,0 +1,57 @@
+button{
+    padding: 8px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.container{
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    position: relative;
+}
+
+#box{
+    width: 80px;
+    height: 80px;
+    background: yellow;
+    position: absolute;
+}
+
+/* Motion */
+.move{
+    animation: squareMove 4s linear infinite;
+}
+/* Square Movement */
+@keyframes squareMove{
+
+    0%{
+        left:0;
+        top:0;
+        background:red;
+    }
+
+    25%{
+        left:400px;
+        top:0;
+        background:blue;
+    }
+
+    50%{
+        left:400px;
+        top:400px;
+        background:green;
+    }
+
+    75%{
+        left:0;
+        top:400px;
+        background:orange;
+    }
+
+    100%{
+        left:0;
+        top:0;
+        background:purple;
+    }
+}
