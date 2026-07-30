@@ -1,0 +1,102 @@
+/* Center the container in the page */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 900px;
+    height: 520px;
+    display: flex;
+    gap: 30px;
+    padding: 25px;
+    border: 2px solid #222;
+    border-radius: 25px;
+    /* Background color */
+    background: radial-gradient(circle,
+            white 45%,
+            #ffe4b0 80%,
+            #ffbf73 100%);
+    /* Inner shadow */
+    box-shadow: inset 0 0 25px rgba(255, 170, 0, .55);
+}
+
+/* Left side buttons */
+.sidebar {
+    width: 140px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 2px solid #222;
+    border-radius: 22px;
+    background: white;
+    box-shadow: inset 0 0 20px rgba(255, 170, 0, .5);
+}
+
+.sidebar button {
+    height: 36px;
+    border: 3px solid dodgerblue;
+    border-radius: 8px;
+    background: white;
+    color: black;
+    cursor: pointer;
+    /* Smooth animation */
+    transition: background .4s, color .4s, transform .8s;
+}
+
+/* Change all buttons when the sidebar is hovered */
+.sidebar:hover button {
+    background: #f9a602;
+    color: black;
+}
+
+/* Change only the hovered button */
+.sidebar button:hover {
+    background: dodgerblue;
+    color: white;
+}
+
+.sidebar button.rotate {
+    transform: rotate(360deg);
+}
+
+/* Video section */
+.player {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #222;
+    border-radius: 25px;
+    background: radial-gradient(circle,
+            white 45%,
+            #ffe8bf 100%);
+    box-shadow: inset 0 0 25px rgba(255, 170, 0, .45);
+    transition: .5s;
+}
+
+/* Change player background on hover */
+.player:hover {
+    background: radial-gradient(circle,
+            #fff7d4 20%,
+            #ffc64a 70%,
+            #f9a602 100%);
+    box-shadow: inset 0 0 35px rgba(255, 165, 0, .8);
+}
+
+video {
+    width: 560px;
+    height: 340px;
+    border-radius: 45px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+/* Zoom video on hover */
+video:hover {
+    transform: scale(1.08);
+}

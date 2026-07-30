@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <button onclick="changeVideo('./vid.mp4',this)">Video1</button>
+            <button onclick="changeVideo('./vid.mp4',this)">Video2</button>
+            <button onclick="changeVideo('./vid.mp4',this)">Video3</button>
+            <button onclick="changeVideo('./vid.mp4',this)">Video4</button>
+            <button onclick="changeVideo('./vid.mp4',this)">Video5</button>
+            <button onclick="changeVideo('./vid.mp4',this)">Video6</button>
+            <button onclick="changeVideo('./vid.mp4',this)">Video7</button>
+            <button onclick="changeVideo('./vid.mp4',this)">Video8</button>
+            <button onclick="changeVideo('./vid.mp4',this)">Video9</button>
+            <button onclick="changeVideo('./vid.mp4',this)">Video10</button>
+        </div>
+
+        <div class="player">
+            <video id="videoPlayer" controls>
+                <source src="./vid.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

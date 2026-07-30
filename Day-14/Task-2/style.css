@@ -1,0 +1,101 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 900px;
+    padding: 25px;
+    border: 2px solid #222;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: radial-gradient(circle,
+            white 45%,
+            #ffe4b0 80%,
+            #ffbf73 100%);
+    /* Inner shadow */
+    box-shadow: inset 0 0 25px rgba(255, 165, 0, .6);
+}
+
+.top {
+    min-height: 110px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    border: 2px solid #222;
+    border-radius: 20px;
+    background: radial-gradient(circle,
+            white 50%,
+            #ffe9bf 100%);
+    box-shadow: inset 0 0 20px rgba(255, 165, 0, .5);
+    transition: .5s;
+}
+
+/* Make the top area smaller when empty */
+.top.empty {
+    min-height: 50px;
+}
+
+/* Show EMPTY text */
+.top.empty::before {
+    content: "EMPTY";
+    font-size: 28px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Drop area */
+.bottom {
+    min-height: 170px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    border: 2px solid #222;
+    border-radius: 20px;
+    background: white;
+    box-shadow: inset 0 0 20px rgba(255, 165, 0, .5);
+    transition: .4s;
+}
+
+/* Change color when dragging over */
+.bottom.active {
+    background: #c8ffd5;
+}
+
+.drop-text {
+    color: #777;
+    font-size: 22px;
+}
+
+img {
+    width: 85px;
+    height: 85px;
+    border: 4px solid #45d9ff;
+    object-fit: cover;
+    cursor: grab;
+    position: relative;
+    transition: transform .6s, box-shadow .4s;
+}
+
+/* Zoom and rotate image on hover */
+img:hover {
+    transform: scale(1.35) translateY(-25px) rotate(360deg);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, .35);
+    z-index: 100;
+}
+
+/* Image while dragging */
+img:active {
+    cursor: grabbing;
+    opacity: .5;
+}
